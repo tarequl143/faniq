@@ -2,6 +2,14 @@ import React from "react";
 import { SectionWrapper } from "../SectionWrapper";
 import Image from "next/image";
 
+const brands = [
+  "/brands/Heiss.png",
+  "/brands/Heights.png",
+  "/brands/Match.png",
+  "/brands/Ema.png",
+  "/brands/Hush.png",
+];
+
 export const Testimonial = () => {
   return (
     <div className="bg-[#0E0F1C] pt-[120px] pb-[110px]">
@@ -29,6 +37,19 @@ export const Testimonial = () => {
             -Ae Asia
           </div>
           <div className="absolute left-1/2 top-1/2 w-[107%] h-[84%] rounded-xl bg-testimonialBg trandform -translate-x-1/2 -translate-y-1/2 " />
+        </div>
+        {/*  */}
+
+        <div className="w-full flex gap-16 items-center justify-center mt-5">
+          {brands.map((brand, index) => (
+            <Image
+              key={index}
+              src={brand}
+              alt="brand"
+              width={108}
+              height={108}
+            />
+          ))}
         </div>
       </SectionWrapper>
     </div>
