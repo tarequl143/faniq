@@ -38,7 +38,7 @@ body {
   border-radius: 50%;
   position: absolute;
   top: 0;
-  left: 0; /* Center horizontally within the pseudo-element */
+  left: 1px; /* Center horizontally within the pseudo-element */
   transform: translate(-50%, 0%);
 }
 
@@ -57,14 +57,14 @@ body {
     transparent 0%,
     transparent 10%,
 
-    rgba(89, 92, 126, 0.9) 10%,
-    rgba(89, 92, 126, 0.9) 20%,
+    rgba(89, 92, 126, 0) 10%,
+    rgba(89, 92, 126, 0.8) 20%,
 
     rgba(89, 92, 126) 20%,
     rgba(89, 92, 126) 80%,
 
-    rgba(89, 92, 126, 0.9) 80%,
-    rgba(89, 92, 126, 0.9) 90%,
+    rgba(89, 92, 126, 0.8) 80%,
+    rgba(89, 92, 126, 0) 90%,
 
     transparent 90%,
     transparent 100%
@@ -80,4 +80,9 @@ body {
     #595c7e 0%,
     #0f111e 100%
   );
+}
+
+.banner-decoration {
+  width: calc(100% + 200px);
+  @apply 2xl:w-[110%];
 }

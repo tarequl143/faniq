@@ -35,7 +35,7 @@ const FeatureCardDetails = ({
         >
           {label}
         </h6>
-        <h3 className="w-[440.34px] text-slate-50 text-[32px] font-semibold leading-[41.60px] mt-5">
+        <h3 className="w-[440px] text-[#F8F8FF] text-[32px] font-semibold leading-[41.60px] mt-5">
           {title}
         </h3>
         <p className="w-[436.44px] text-[#94A2C9] text-base font-normal leading-7 mt-7">
@@ -69,7 +69,7 @@ const FeatureImage = ({ src }) => {
 };
 
 const FeatureWrapper = ({ children }) => {
-  return <div className="grid grid-cols-2 gap-20 mt-20">{children}</div>;
+  return <div className="grid grid-cols-2 gap-20">{children}</div>;
 };
 
 export const Features = () => {
@@ -79,7 +79,7 @@ export const Features = () => {
         <div>
           {/* header */}
           <div className="flex flex-col items-center justify-center gap-5">
-            <h2 className="w-[730px] text-center text-slate-50 text-[44px] font-semibold leading-[130%]">
+            <h2 className="w-[730px] text-center text-[#F8F8FF] text-[44px] font-semibold leading-[130%]">
               Upselling &{" "}
               <span className="px-1 textBGPrimary rounded-md">Automation</span>{" "}
               Tools For OnlyFans Agencies
@@ -95,7 +95,7 @@ export const Features = () => {
 
           {/* feature card */}
 
-          <div className="flex flex-col gap-20">
+          <div className="mt-20 flex flex-col gap-x-20 gap-y-[120px]">
             <FeatureWrapper>
               <FeatureCardDetails
                 label={"1:1 Chatting"}
@@ -104,7 +104,7 @@ export const Features = () => {
                   "Boost your 1:1 chatting results for all of your chatters with actionable insights on fans and PPVs. Apply a powerful and efficient chatting system with no effort."
                 }
                 circleColor="#6366F1"
-                gradientClass={`from-[#818CF8] via-[#818CF8] to-[#0C0C14]`}
+                gradientClass={`from-[#818CF8] via-[#818df85f] to-[#0C0C14]`}
               >
                 <div className="mt-10 grid grid-cols-2 gap-4">
                   <FeatureTag title="Fan's CRM" icon={"/icons/Analytics.svg"} />
@@ -136,7 +136,7 @@ export const Features = () => {
                   "Supercharge your PPV mass messages with Smart Pricing and expired fans Auto-Follower."
                 }
                 circleColor="#EBB308"
-                gradientClass="from-[#FBBF24] via-[#FBBF24] to-[#0C0C14]"
+                gradientClass="from-[#FBBF24] via-[#fbbe245f] to-[#0C0C14]"
               >
                 <div className="mt-10 grid grid-cols-2 gap-4">
                   <FeatureTag
@@ -170,7 +170,7 @@ export const Features = () => {
                   "Track your TikTok, Instagram, and Twitter to understand your fans' demographics and boost your OnlyFans growth. Discover where they're from and their age to tailor your content. Leverage these insights to engage your audience and watch your revenue soar."
                 }
                 circleColor="#65A30A"
-                gradientClass={`from-[#84CC16] via-[#84CC16] to-[#0C0C14]`}
+                gradientClass={`from-[#84CC16] via-[#83cc165e] to-[#0C0C14]`}
               ></FeatureCardDetails>
               <FeatureImage src={"/TrackTiktok.svg"} />
             </FeatureWrapper>

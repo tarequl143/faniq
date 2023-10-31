@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { SectionWrapper } from "../SectionWrapper";
 import Image from "next/image";
 
@@ -14,7 +16,7 @@ const Logo = () => {
 const LinkItem = ({ props, children }) => {
   return (
     <span
-      className="text-slate-500 hover:text-slate-50 text-sm font-normal cursor-pointer"
+      className="text-[#686B95] hover:text-slate-50 text-sm font-normal cursor-pointer"
       {...props}
     >
       {children}
@@ -33,19 +35,49 @@ const Links = () => {
   );
 };
 
-const Navbar = () => {
+const MobileLinks = () => {
   return (
-    <div className="p-5 bg-[#0E0F1C]">
+    <div className="absolute z-50 bg-[#0E0F1C] bottom-0 left-0 right-0 transform translate-y-full py-4 flex flex-col md:hidden items-center justify-center gap-6">
+      <LinkItem>Features</LinkItem>
+      <LinkItem>Testimonials</LinkItem>
+      <LinkItem>Pricing</LinkItem>
+      <LinkItem>OnlyFans Academy</LinkItem>
+      <div className=" inline-flex w-40 h-9 px-4 py-2.5 bg-violet-200 rounded-md border justify-center items-center gap-2.5 ">
+        <button className="text-gray-900 text-sm font-medium">
+          Get Started - free
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const Navbar = () => {
+  const [showMobileNav, setShowMobileNav] = useState(false);
+
+  return (
+    <div className="py-5 md:p-5 bg-[#0E0F1C] relative">
       <SectionWrapper>
         <div className="flex items-center justify-between">
           <Logo />
-          <Links />
+          <div className="hidden md:block">
+            <Links />
+          </div>
 
-          <div className="w-40 h-9 px-4 py-2.5 bg-violet-200 rounded-md border justify-center items-center gap-2.5 inline-flex">
+          <div className="hidden md:inline-flex w-40 h-9 px-4 py-2.5 bg-violet-200 rounded-md border justify-center items-center gap-2.5 ">
             <button className="text-gray-900 text-sm font-medium">
               Get Started - free
             </button>
           </div>
+
+          {/* mobile */}
+          <div
+            className="block md:hidden"
+            onClick={() => setShowMobileNav(!showMobileNav)}
+          >
+            <Image src="/burger.svg" height={50} width={50} alt="burger" />
+          </div>
+          {showMobileNav && <MobileLinks />}
+          {/* mobile */}
         </div>
       </SectionWrapper>
     </div>

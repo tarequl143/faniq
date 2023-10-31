@@ -7,15 +7,41 @@ module.exports = {
   ],
   theme: {
     container: {
+      padding: {
+        DEFAULT: "20px",
+        sm: "1rem",
+        lg: "0rem",
+        xl: "0rem",
+        "2xl": "0rem",
+      },
       // you can configure the container to be centered
       center: true,
       screens: {
         sm: "600px",
         md: "728px",
         lg: "984px",
-        xl: "1170px",
-        "2xl": "1170px",
+        xl: "984px",
+        "2xl": "970px",
+        "3xl": "1170px",
       },
+    },
+    screens: {
+      sm: "640px",
+      // => @media (min-width: 640px) { ... }
+
+      md: "768px",
+      // => @media (min-width: 768px) { ... }
+
+      lg: "1024px",
+      // => @media (min-width: 1024px) { ... }
+
+      xl: "1280px",
+      // => @media (min-width: 1280px) { ... }
+
+      "2xl": "1400px",
+
+      "3xl": "1800px",
+      // => @media (min-width: 1536px) { ... }
     },
     extend: {
       backgroundImage: {

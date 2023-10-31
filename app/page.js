@@ -23,7 +23,6 @@ export default function Home() {
       <FrequentlyAskedQuestions />
       <Banner />
       <Footer />
-      <div className="p-96" />
     </main>
   );
 }

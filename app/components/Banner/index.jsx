@@ -33,9 +33,8 @@ export const Banner = () => {
 
           {/* decoration */}
           <div
-            className="h-[90px] absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/3 z-0 bg-cover bg-no-repeat bg-center "
+            className="hidden 2xl:block h-[90px] absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/3 z-0 bg-cover bg-no-repeat bg-center banner-decoration "
             style={{
-              width: "calc(100% + 200px)",
               backgroundImage: "url(/BannerDecoration.png)",
             }}
           ></div>
