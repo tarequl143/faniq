@@ -38,7 +38,7 @@ export const FrequentlyAskedQuestions = () => {
     width: "calc(50% - 15px)",
   };
   return (
-    <div className="pt-[120px] pb-[80px] bg-[#0E0F1C]">
+    <div className="pt-[120px]  bg-[#0E0F1C]">
       <SectionWrapper>
         <h2 className="text-center text-slate-50 text-[44px] font-semibold leading-[57px]">
           Frequently{" "}

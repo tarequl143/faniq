@@ -7,6 +7,7 @@ import { OnlyFansFeatures } from "./components/OnlyfansFeature";
 import { QuickFeatures } from "./components/QuickFeatures";
 import { FrequentlyAskedQuestions } from "./components/FrequentlyAskedQuestions";
 import { Banner } from "./components/Banner";
+import { Footer } from "./Footer";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <QuickFeatures />
       <FrequentlyAskedQuestions />
       <Banner />
+      <Footer />
       <div className="p-96" />
     </main>
   );

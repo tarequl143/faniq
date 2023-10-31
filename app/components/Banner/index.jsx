@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export const Banner = () => {
   return (
-    <div>
+    <div className="bg-[#0E0F1C] py-20">
       <SectionWrapper>
-        <div className="relative ">
+        <div className="relative">
           <div className="z-10 relative flex items-center justify-between py-20 px-[166px] bg-bannerBG bg-cover bg-no-repeat bg-center">
             <div className="w-[400px]">
               <div className=" text-slate-50 text-[32px] font-semibold leading-[41px]">
