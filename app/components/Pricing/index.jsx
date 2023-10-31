@@ -201,7 +201,7 @@ const PricingHeader = () => {
     <div className="pt-[80px] lg:pt-[120px] bg-priceHeaderBG bg-cover bg-no-repeat bg-center">
       <SectionWrapper>
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
-          <h2 className="w-full lg:w-[630px] text-[#F8F8FF] text-[44px] font-semibold  leading-[130%]">
+          <h2 className="w-full lg:w-[630px] text-[#F8F8FF] text-[36px] lg:text-[44px] font-semibold  leading-[130%]">
             For every Business, we have the{" "}
             <span className="px-1 textBGPrimary rounded-md">
               Perfect pricing
@@ -209,7 +209,7 @@ const PricingHeader = () => {
             plan
           </h2>
 
-          <p className="w-[392px] text-[#94A2C9] leading-[170%] font-normal">
+          <p className="w-full md:w-[392px] text-[#94A2C9] leading-[170%] font-normal">
             For every onlyFans account you manage, you can choose a different
             license depending on your needs
           </p>

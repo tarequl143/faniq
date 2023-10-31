@@ -49,8 +49,8 @@ body {
 }
 
 .gradient-stripe-bg {
-  border-left: 10px solid;
   border-image-slice: 1;
+  border-left: 10px solid;
   border-left-width: 1px;
   border-image-source: linear-gradient(
     to bottom,
@@ -69,6 +69,13 @@ body {
     transparent 90%,
     transparent 100%
   );
+}
+
+@media (max-width: 1000px) {
+  .gradient-stripe-bg {
+    border-bottom: 10px solid;
+    border-bottom-width: 1px;
+  }
 }
 
 .pricing-border {

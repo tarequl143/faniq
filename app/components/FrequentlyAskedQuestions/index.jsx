@@ -15,7 +15,7 @@ const Accordion = ({ title, open = false, children }) => {
     <div className="rounded-md bg-quesBg bg-no-repeat bg-cover bg-center py-6 px-5">
       <div className="flex items-start ">
         <h4
-          className="flex-1 text-base font-semibold leading-[130%]"
+          className="flex-1 text-lg md:text-base font-semibold leading-[130%]"
           style={{
             color: show ? "#F8F8FF" : "#94A2C9",
           }}
@@ -39,18 +39,15 @@ const Accordion = ({ title, open = false, children }) => {
 };
 
 export const FrequentlyAskedQuestions = () => {
-  const accordionWidth = {
-    width: "calc(50% - 15px)",
-  };
   return (
-    <div className="pt-[120px]  bg-[#0E0F1C]">
+    <div className="pt-20 md:pt-[120px]  bg-[#0E0F1C]">
       <SectionWrapper>
-        <h2 className="text-center text-slate-50 text-[44px] font-semibold leading-[57px]">
+        <h2 className="text-center text-slate-50 text-[36px] lg:text-[44px] font-semibold leading-[57px]">
           Frequently{" "}
           <span className="px-1 textBGPrimary rounded-md">Asked Questions</span>
         </h2>
 
-        <div className="grid grid-cols-2 gap-x-[30px] mt-[86px]">
+        <div className="grid md:grid-cols-2 md:gap-x-[30px] mt-[60px] md:mt-[86px]">
           <div className="flex flex-col gap-5">
             <Accordion title={"What is FansIQ?"} open={true}>
               {placeholderContent}
@@ -68,7 +65,7 @@ export const FrequentlyAskedQuestions = () => {
               {placeholderContent}
             </Accordion>
           </div>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 mt-5 md:mt-0">
             <Accordion
               title={"How does FansIQ benefit an OnlyFans agency?"}
               open={false}

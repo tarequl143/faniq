@@ -12,7 +12,7 @@ const brands = [
 
 export const Testimonial = () => {
   return (
-    <div className="bg-[#0E0F1C] pt-[80px] pb-[110px]">
+    <div className="bg-[#0E0F1C] pt-[80px] pb-20 lg:pb-[110px]">
       <SectionWrapper>
         <h2 className="text-center text-slate-50 text-[36px] lg:text-[44px] font-semibold leading-[57.20px]">
           Join 850+ of Top Agencies
