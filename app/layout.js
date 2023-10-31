@@ -1,6 +1,5 @@
 import { Sora } from "next/font/google";
 import "./globals.css";
-import "material-icons/iconfont/material-icons.css";
 
 const sora = Sora({ subsets: ["latin"] });
 
