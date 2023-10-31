@@ -14,7 +14,12 @@ const Accordion = ({ title, open = false, children }) => {
   return (
     <div className="rounded-md bg-quesBg bg-no-repeat bg-cover bg-center py-6 px-5">
       <div className="flex items-start ">
-        <h4 className="flex-1 text-[#F8F8FF] text-base font-semibold leading-[130%]">
+        <h4
+          className="flex-1 text-base font-semibold leading-[130%]"
+          style={{
+            color: show ? "#F8F8FF" : "#94A2C9",
+          }}
+        >
           {title}
         </h4>
         {/* close btn */}

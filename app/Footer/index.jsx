@@ -62,7 +62,7 @@ export const Footer = () => {
     <div className="bg-[#0E0F1C]">
       <div className="bg-footerBG bg-cover bg-no-repeat bg-center">
         <SectionWrapper>
-          <div className="py-20">
+          <div className="pb-20">
             <div className="flex flex-wrap items-start justify-between">
               {/*  */}
               <div className="w-[236px] flex flex-col justify-start items-start gap-6">
@@ -78,7 +78,7 @@ export const Footer = () => {
                 <h4 className="text-[#94A2C9] text-sm font-medium">
                   Our Product
                 </h4>
-                <ul className="text-[#6C7695] text-sm font-light leading-9 list-disc  mt-9">
+                <ul className="text-[#6C7695] text-sm font-light leading-9 list-disc list-inside  mt-9">
                   {productLinks.map((link) => (
                     <li
                       className="cursor-pointer hover:text-textPrimary"
@@ -95,7 +95,7 @@ export const Footer = () => {
                 <h4 className="text-[#94A2C9] text-sm font-medium">
                   Quick Links
                 </h4>
-                <ul className="text-[#6C7695] text-sm font-[300] leading-9 list-disc mt-9">
+                <ul className="text-[#6C7695] text-sm font-[300] leading-9 list-disc list-inside mt-9">
                   {quickLinks.map((link) => (
                     <li
                       className="cursor-pointer hover:text-textPrimary"
@@ -113,15 +113,19 @@ export const Footer = () => {
                   Contact us
                 </h4>
                 <div>
-                  <ul className="text-[#6C7695] font-[300] text-[14px] mt-9">
+                  <ul className="list-disc list-inside text-[#6C7695] font-light text-[14px] mt-9">
                     <li>
                       Phone: <br />
-                      (704) 555-0127 <br />
-                      (316) 555-0116
+                      <span className="inline-block pl-5">
+                        (704) 555-0127 <br />
+                        (316) 555-0116
+                      </span>
                     </li>
                     <li className="mt-5">
                       Email Us: <br />
-                      bill.sanders@example.com
+                      <span className="inline-block pl-5">
+                        bill.sanders@example.com
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -131,7 +135,7 @@ export const Footer = () => {
                     <input
                       type="text"
                       placeholder="Enter your Message"
-                      className="text-textSecondary rounded-md p-0 m-0 outline-none border-none w-full py-[14px] px-4 placeholder:opacity-60 placeholder:text-slate-500 placeholder:text-xs placeholder:font-normal placeholder:leading-[18px]"
+                      className="text-textSecondary py-[14px] px-4 text-[12px] w-full placeholder:text-[#686B95] placeholder:font-light rounded-md"
                     />
 
                     <div className="w-[109px] h-[31px] px-4 py-2 bg-gradient-to-r from-sky-600 to-sky-700 rounded justify-center items-center gap-2.5 inline-flex mt-[18px]">

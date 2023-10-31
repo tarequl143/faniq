@@ -178,7 +178,7 @@ const PricingCard = ({ title, price, desc, features, banner }) => {
 
 const PricingHeader = () => {
   return (
-    <div>
+    <div className="pt-[120px] bg-priceHeaderBG bg-cover bg-no-repeat bg-center">
       <SectionWrapper>
         <div className="flex items-center justify-between">
           <h2 className="w-[630px] text-[#F8F8FF] text-[44px] font-semibold  leading-[130%]">
