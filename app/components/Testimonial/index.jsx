@@ -27,7 +27,7 @@ export const Testimonial = () => {
             </div>
             {/* avatar */}
 
-            <h5 className="text-center text-slate-400 text-base font-normal leading-7">
+            <h5 className="text-center text-[#94A2C9] text-base font-normal leading-7">
               After using FansIQ for almost a month my PPV sales have doubled.
               It&apos;s really helped me being able to automatically follow all
               my old subs. Makes my inbox super organised and the AI chat

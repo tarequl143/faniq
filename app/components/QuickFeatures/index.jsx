@@ -11,7 +11,7 @@ const Card = ({ title, desc, icon }) => {
         {title}
       </h4>
 
-      <p className="text-slate-400 text-base font-normal leading-7 mt-5">
+      <p className="text-[#94A2C9] text-base font-normal leading-7 mt-5">
         {desc}
       </p>
     </div>

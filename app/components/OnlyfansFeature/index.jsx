@@ -11,7 +11,7 @@ export const OnlyFansFeatures = () => {
             <span className="px-1 textBGPrimary rounded-md">OnlyFans</span>{" "}
             Agencies Success
           </h2>
-          <p className="w-[418.25px] text-slate-400 text-base font-normal leading-7">
+          <p className="w-[418px] text-[#94A2C9] text-base font-normal leading-7">
             Nunc rhoncus eget erat eget tempus. In nunc dolor, accumsan eget
             ipsum ut, hendrerit accumsan leo. Nullam ullamcorper ante ac
             fringilla mollis euismod sem dolor

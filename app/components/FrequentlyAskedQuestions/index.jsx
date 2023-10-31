@@ -25,7 +25,7 @@ const Accordion = ({ title, open = false, children }) => {
 
       {/* body */}
       {show && (
-        <p className="text-slate-400 text-sm font-normal leading-[170%] mt-4">
+        <p className="text-[#94A2C9] text-sm font-normal leading-[170%] mt-4">
           {children}
         </p>
       )}

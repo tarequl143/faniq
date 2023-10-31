@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const FeatureTag = ({ title, icon }) => {
   return (
-    <div className="flex items-center justify-start gap-3 text-slate-400 text-base font-medium leading-7">
+    <div className="flex items-center justify-start gap-3 text-[#94A2C9] text-base font-medium leading-7">
       <Image src={icon} height={20} width={20} alt="icon" />
       {title}
     </div>
@@ -38,7 +38,7 @@ const FeatureCardDetails = ({
         <h3 className="w-[440.34px] text-slate-50 text-[32px] font-semibold leading-[41.60px] mt-5">
           {title}
         </h3>
-        <p className="w-[436.44px] text-slate-400 text-base font-normal leading-7 mt-7">
+        <p className="w-[436.44px] text-[#94A2C9] text-base font-normal leading-7 mt-7">
           {description}
         </p>
 

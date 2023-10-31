@@ -70,3 +70,14 @@ body {
     transparent 100%
   );
 }
+
+.pricing-border {
+  border-bottom: 1px solid;
+  border-image-slice: 1;
+  border-bottom-width: 1px;
+  border-image-source: radial-gradient(
+    19126.34% 50.3% at 53.64% 50%,
+    #595c7e 0%,
+    #0f111e 100%
+  );
+}
