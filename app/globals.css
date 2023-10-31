@@ -48,3 +48,26 @@ body {
   height: 100%;
   background: #fff; /* Background color for the content area */
 }
+
+.gradient-stripe-bg {
+  border-left: 10px solid;
+  border-image-slice: 1;
+  border-left-width: 1px;
+  border-image-source: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 10%,
+
+    rgba(89, 92, 126, 0.9) 10%,
+    rgba(89, 92, 126, 0.9) 20%,
+
+    rgba(89, 92, 126) 20%,
+    rgba(89, 92, 126) 80%,
+
+    rgba(89, 92, 126, 0.9) 80%,
+    rgba(89, 92, 126, 0.9) 90%,
+
+    transparent 90%,
+    transparent 100%
+  );
+}
