@@ -18,13 +18,13 @@ const Accordion = ({ title, open = false, children }) => {
           {title}
         </h4>
         {/* close btn */}
-        <div className="cursor-pointer " onClick={() => setShow(!show)}>
+        <div className="cursor-pointer" onClick={() => setShow(!show)}>
           <Image src={iconSrc} height={20} width={20} alt="icon" />
         </div>
       </div>
 
       {/* body */}
-      {open && (
+      {show && (
         <p className="text-slate-400 text-sm font-normal leading-[170%] mt-4">
           {children}
         </p>
