@@ -43,7 +43,7 @@ const FeatureCardDetails = ({
         </p>
 
         <div className="w-[171px] h-[27px] mt-5">
-          <button className="flex items-center justify-center gap-3 text-sky-600 text-base font-semibold leading-7 ">
+          <button className="flex items-center justify-center gap-3 text-sky-600 hover:text-[#0DA6E9] text-base font-semibold leading-7 ">
             See how it works{" "}
             <Image
               src="/icons/RightArrow.svg"

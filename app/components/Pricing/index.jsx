@@ -61,6 +61,7 @@ const pricings = [
     ],
   },
   {
+    isActive: true,
     banner: "Best Choice",
     title: "Professional",
     price: 242,
@@ -94,9 +95,9 @@ const pricings = [
   },
 ];
 
-const PricingCard = ({ title, price, desc, features, banner }) => {
+const PricingCard = ({ title, price, desc, features, banner, isActive }) => {
   return (
-    <div className="bg-[#131426] py-10 px-5 rounded relative">
+    <div className={`bg-[#131426] py-10 px-5 rounded relative border ${isActive ? "border-[#008CCF]" : "border-[#131426]"}`}>
       {/* banner */}
       {banner && (
         <div
@@ -133,7 +134,7 @@ const PricingCard = ({ title, price, desc, features, banner }) => {
       </div>
 
       {/* trial */}
-      <div className="cursor-pointer w-full py-3 bg-[#008CCF] rounded-md justify-center items-center gap-2.5 inline-flex">
+      <div className="cursor-pointer z-10 w-full py-3 bg-[#008CCF] relative overflow-hidden before:-z-10 before:content-[''] before:absolute before:bg-[#37BDF8] before:right-[105%] before:-top-[80px] before:w-[200%] before:h-[150px] before:rotate-[10deg] before:transition-all before:duration-500 hover:before:right-[-25%] rounded-md justify-center items-center gap-2.5 inline-flex">
         <div className="text-white text-sm font-medium">
           Start 7 days Free Trial
         </div>
@@ -168,9 +169,10 @@ const PricingCard = ({ title, price, desc, features, banner }) => {
       {/* features */}
 
       {/* button */}
-      <div className="cursor-pointer py-3 bg-[#131426] rounded-md flex items-center justify-center gap-4 border border-[#545B77]">
-        <p className="text-[#94A2C9] text-sm font-medium">Show all feature</p>
-        <Image src="/expand_more.svg" height={20} width={20} alt="arrow" />
+      <div className="group cursor-pointer py-3 bg-[#131426] rounded-md flex items-center justify-center gap-4 border border-[#545B77]">
+        <p className="text-[#94A2C9] text-sm font-medium group-hover:text-[#ffffff]">Show all feature</p>
+        <Image src="/expand_more.svg" height={20} width={20} alt="arrow" className="group-hover:hidden" />
+        <Image src="/expand_more_white.png" height={20} width={20} alt="arrow" className="hidden group-hover:inline-flex" />
       </div>
     </div>
   );
