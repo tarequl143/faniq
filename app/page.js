@@ -5,6 +5,7 @@ import { Features } from "./components/Features";
 import { Testimonial } from "./components/Testimonial";
 import { OnlyFansFeatures } from "./components/OnlyfansFeature";
 import { QuickFeatures } from "./components/QuickFeatures";
+import { FrequentlyAskedQuestions } from "./components/FrequentlyAskedQuestions";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Testimonial />
       <OnlyFansFeatures />
       <QuickFeatures />
+      <FrequentlyAskedQuestions />
       <div className="p-96" />
     </main>
   );
