@@ -22,6 +22,7 @@ module.exports = {
         hero_pattern: "url('/HeroGrid.svg')",
         testimonialBg: "url('/testimonialBg.png')",
         quesBg: "url('/QuesBG.png')",
+        bannerBG: "url('/BannerBG.png')",
         stripGradient:
           "linear-gradient(to bottom, transparent 0%, transparent 20%, #FF0000 20%, #FF0000 80%, transparent 80%, transparent 100%)",
         stripeBG: "url('/icons/Rect.png')",

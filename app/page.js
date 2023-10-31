@@ -6,6 +6,7 @@ import { Testimonial } from "./components/Testimonial";
 import { OnlyFansFeatures } from "./components/OnlyfansFeature";
 import { QuickFeatures } from "./components/QuickFeatures";
 import { FrequentlyAskedQuestions } from "./components/FrequentlyAskedQuestions";
+import { Banner } from "./components/Banner";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <OnlyFansFeatures />
       <QuickFeatures />
       <FrequentlyAskedQuestions />
+      <Banner />
       <div className="p-96" />
     </main>
   );
