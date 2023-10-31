@@ -12,22 +12,22 @@ const brands = [
 
 export const Testimonial = () => {
   return (
-    <div className="bg-[#0E0F1C] pt-[120px] pb-[110px]">
+    <div className="bg-[#0E0F1C] pt-[80px] pb-[110px]">
       <SectionWrapper>
-        <h2 className="text-center text-slate-50 text-[44px] font-semibold leading-[57.20px]">
+        <h2 className="text-center text-slate-50 text-[36px] lg:text-[44px] font-semibold leading-[57.20px]">
           Join 850+ of Top Agencies
         </h2>
 
         {/*  */}
-        <div className="relative w-[666px] mx-auto">
-          <div className="relative px-[60px] pt-[72px] pb-[52px] bg-[#131426] rounded-xl mt-[120px] z-10">
+        <div className="relative w-[90%] lg:w-[666px] mx-auto">
+          <div className="relative px-[60px] pt-[72px] pb-[52px] bg-[#131426] rounded-xl mt-[90px] lg:mt-[120px] z-10">
             {/* avatar */}
             <div className="absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-1/2">
               <Image height={72} width={72} src="/Avatar.svg" alt="avatar" />
             </div>
             {/* avatar */}
 
-            <h5 className="text-center text-[#94A2C9] text-base font-normal leading-7">
+            <h5 className="text-center text-[#94A2C9] text-xl leading-[150%] lg:text-base font-normal lg:leading-7">
               After using FansIQ for almost a month my PPV sales have doubled.
               It&apos;s really helped me being able to automatically follow all
               my old subs. Makes my inbox super organised and the AI chat
@@ -38,12 +38,12 @@ export const Testimonial = () => {
               -Ae Asia
             </div>
           </div>
-          <div className="absolute left-1/2 top-1/2 w-[107%] h-[84%] rounded-xl bg-testimonialBg bg-cover bg-center trandform -translate-x-1/2 -translate-y-1/2 " />
+          <div className="absolute left-1/2 top-1/2 w-[107%] h-[92%] lg:h-[84%] rounded-xl bg-testimonialBg bg-cover bg-center trandform -translate-x-1/2 -translate-y-1/2 " />
         </div>
 
         {/*  */}
 
-        <div className="w-full flex gap-16 items-center justify-center mt-5">
+        <div className="w-full flex gap-16 items-center justify-center lg:mt-5 overflow-x-auto">
           {brands.map((brand, index) => (
             <Image
               key={index}

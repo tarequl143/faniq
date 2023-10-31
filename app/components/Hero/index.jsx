@@ -18,13 +18,13 @@ export const Hero = () => {
             most revenue and provide AI chatting tools to grow your revenue.
           </div>
 
-          <div className="w-auto md:w-40 h-12 p-4 bg-sky-600 rounded-md justify-center items-center gap-2.5 inline-flex mt-6">
+          <div className="w-auto md:w-40 h-12 p-4 z-10 bg-[#0DA6E9] relative overflow-hidden before:-z-10 before:content-[''] before:absolute before:bg-[#37BDF8] before:right-[110%] before:-top-[44px] before:w-[200%] before:h-[200%] before:rotate-[15deg] before:transition-all before:duration-500 hover:before:right-[-10%] rounded-md justify-center items-center gap-2.5 inline-flex mt-6">
             <button className="text-white text-base md:text-sm font-medium">
               Get Started - free
             </button>
           </div>
 
-          <div className="hidden md:block mt-[60px]">
+          <div className="hidden xl:block mt-[60px]">
             <Image
               src="/Dashboard.svg"
               height={626}

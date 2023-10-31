@@ -61,6 +61,7 @@ const pricings = [
     ],
   },
   {
+    isActive: true,
     banner: "Best Choice",
     title: "Professional",
     price: 242,
@@ -94,9 +95,13 @@ const pricings = [
   },
 ];
 
-const PricingCard = ({ title, price, desc, features, banner }) => {
+const PricingCard = ({ title, price, desc, features, banner, isActive }) => {
   return (
-    <div className="bg-[#131426] py-10 px-5 rounded relative">
+    <div
+      className={`bg-[#131426] py-10 px-5 rounded relative border ${
+        isActive ? "border-[#008CCF]" : "border-[#131426]"
+      }`}
+    >
       {/* banner */}
       {banner && (
         <div
@@ -116,9 +121,9 @@ const PricingCard = ({ title, price, desc, features, banner }) => {
       {/* header   */}
 
       {/* pricing */}
-      <div className="text-center pt-[72px] pb-[64px] relative">
-        <h4 className="text-[#F8F8FF] text-[72px] font-light leading-[100%] ">
-          ${price} <sub className="text-[#94A2C9] text-xl">/mo</sub>
+      <div className="text-center pt-10 lg:pt-[72px] pb-[64px] relative">
+        <h4 className="text-[#F8F8FF] text-[80px] lg:text-[72px] font-light leading-[100%] ">
+          ${price} <sub className="text-[#94A2C9] text-2xl lg:text-xl">/mo</sub>
         </h4>
         <p className="text-[#94A2C9] text-xl font-light leading-[100%] mt-3">
           Creator
@@ -126,15 +131,15 @@ const PricingCard = ({ title, price, desc, features, banner }) => {
       </div>
 
       {/* pricing */}
-      <div className="h-[172px] flex items-center justify-center">
-        <p className="text-[#94A2C9] leading-[170%] text-center text-base font-light">
+      <div className="h-auto py-8 lg:py-0 lg:h-[172px] flex items-center justify-center">
+        <p className="text-[#94A2C9] leading-[170%] text-center text-lg lg:text-base font-light">
           {desc}
         </p>
       </div>
 
       {/* trial */}
-      <div className="cursor-pointer w-full py-3 bg-[#008CCF] rounded-md justify-center items-center gap-2.5 inline-flex">
-        <div className="text-white text-sm font-medium">
+      <div className="cursor-pointer z-10 w-full py-3 bg-[#008CCF] relative overflow-hidden before:-z-10 before:content-[''] before:absolute before:bg-[#37BDF8] before:right-[105%] before:-top-[80px] before:w-[200%] before:h-[150px] before:rotate-[10deg] before:transition-all before:duration-500 hover:before:right-[-25%] rounded-md justify-center items-center gap-2.5 inline-flex">
+        <div className="text-white text-base lg:text-sm font-medium">
           Start 7 days Free Trial
         </div>
       </div>
@@ -153,7 +158,7 @@ const PricingCard = ({ title, price, desc, features, banner }) => {
                   alt="check"
                 />
                 <p
-                  className="font-normal leading-[160%] text-base"
+                  className="font-normal leading-[160%] text-lg lg:text-base"
                   style={{
                     color: feature.available ? "#94A2C9" : "#545B77",
                   }}
@@ -168,9 +173,24 @@ const PricingCard = ({ title, price, desc, features, banner }) => {
       {/* features */}
 
       {/* button */}
-      <div className="cursor-pointer py-3 bg-[#131426] rounded-md flex items-center justify-center gap-4 border border-[#545B77]">
-        <p className="text-[#94A2C9] text-sm font-medium">Show all feature</p>
-        <Image src="/expand_more.svg" height={20} width={20} alt="arrow" />
+      <div className="group cursor-pointer py-3 bg-[#131426] rounded-md flex items-center justify-center gap-4 border border-[#545B77]">
+        <p className="text-[#94A2C9] text-base lg:text-sm font-medium group-hover:text-[#ffffff]">
+          Show all feature
+        </p>
+        <Image
+          src="/expand_more.svg"
+          height={20}
+          width={20}
+          alt="arrow"
+          className="group-hover:hidden"
+        />
+        <Image
+          src="/expand_more_white.png"
+          height={20}
+          width={20}
+          alt="arrow"
+          className="hidden group-hover:inline-flex"
+        />
       </div>
     </div>
   );
@@ -178,10 +198,10 @@ const PricingCard = ({ title, price, desc, features, banner }) => {
 
 const PricingHeader = () => {
   return (
-    <div className="pt-[120px] bg-priceHeaderBG bg-cover bg-no-repeat bg-center">
+    <div className="pt-[80px] lg:pt-[120px] bg-priceHeaderBG bg-cover bg-no-repeat bg-center">
       <SectionWrapper>
-        <div className="flex items-center justify-between">
-          <h2 className="w-[630px] text-[#F8F8FF] text-[44px] font-semibold  leading-[130%]">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
+          <h2 className="w-full lg:w-[630px] text-[#F8F8FF] text-[44px] font-semibold  leading-[130%]">
             For every Business, we have the{" "}
             <span className="px-1 textBGPrimary rounded-md">
               Perfect pricing
@@ -196,14 +216,12 @@ const PricingHeader = () => {
         </div>
 
         {/* buttons */}
-        <div className="flex items-center justify-start gap-4 mt-20">
-          <p className="text-[#F8F8FF] text-base font-bold leading-none">
-            Monthly
-          </p>
+        <div className="flex items-center justify-start gap-4 mt-[60px] lg:mt-20 text-lg lg:text-base">
+          <p className="text-[#F8F8FF] font-bold leading-none">Monthly</p>
 
           <Image src="/switch.svg" height={20} width={40} alt="switch" />
 
-          <p className="text-[#94A2C9] text-base font-normal ">
+          <p className="text-[#94A2C9] font-normal ">
             Annually <span className="text-[#018CCF]">(Save 20%)</span>
           </p>
         </div>
@@ -217,9 +235,9 @@ export const Pricing = () => {
     <div>
       <PricingHeader />
 
-      <div className="mt-[62px]">
+      <div className="mt-10 lg:mt-[62px]">
         <SectionWrapper>
-          <div className="grid grid-cols-3 gap-[30px]">
+          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-[30px]">
             {pricings.map((pricing, index) => {
               return <PricingCard {...pricing} key={index} />;
             })}

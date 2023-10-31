@@ -138,7 +138,7 @@ export const Footer = () => {
                       className="text-textSecondary py-[14px] px-4 text-[12px] w-full placeholder:text-[#686B95] placeholder:font-light rounded-md"
                     />
 
-                    <div className="w-[109px] h-[31px] px-4 py-2 bg-gradient-to-r from-sky-600 to-sky-700 rounded justify-center items-center gap-2.5 inline-flex mt-[18px]">
+                    <div className="relative overflow-hidden before:-z-10 before:content-[''] before:absolute before:bg-[#37BDF8] before:right-[110%] before:-top-[32px] before:w-[200%] before:h-[200%] before:rotate-[15deg] before:transition-all before:duration-500 hover:before:right-[-10%] z-10 w-[109px] h-[31px] px-4 py-2 bg-gradient-to-r from-sky-600 to-sky-700 rounded justify-center items-center gap-2.5 inline-flex mt-[18px]">
                       <button className="min-w-max outline-none border-none py-2 px-4 text-white text-xs font-medium">
                         Submit Now
                       </button>

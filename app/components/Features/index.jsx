@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const FeatureTag = ({ title, icon }) => {
   return (
-    <div className="flex items-center justify-start gap-3 text-[#94A2C9] text-base font-medium leading-7">
+    <div className="flex items-center justify-start gap-3 text-[#94A2C9] text-xl lg:text-base font-medium leading-7">
       <Image src={icon} height={20} width={20} alt="icon" />
       {title}
     </div>
@@ -30,20 +30,20 @@ const FeatureCardDetails = ({
       />
       <div className="px-10 pb-7">
         <h6
-          className={`text-base font-medium leading-7`}
+          className={`text-lg lg:text-base font-medium leading-7`}
           style={{ color: circleColor }}
         >
           {label}
         </h6>
-        <h3 className="w-[440px] text-[#F8F8FF] text-[32px] font-semibold leading-[41.60px] mt-5">
+        <h3 className="w-full lg:w-[440px] text-[#F8F8FF] text-[28px] lg:text-[32px] font-semibold leading-[41.60px] mt-5">
           {title}
         </h3>
-        <p className="w-[436.44px] text-[#94A2C9] text-base font-normal leading-7 mt-7">
+        <p className="w-full lg:w-[436.44px] text-[#94A2C9] text-xl lg:text-base font-normal leading-7 mt-5 lg:mt-7">
           {description}
         </p>
 
-        <div className="w-[171px] h-[27px] mt-5">
-          <button className="flex items-center justify-center gap-3 text-sky-600 text-base font-semibold leading-7 ">
+        <div className="w-max lg:w-[171px] h-[27px] mt-5">
+          <button className="flex items-center justify-center gap-3 text-sky-600 hover:text-[#0DA6E9] text-xl lg:text-base font-semibold leading-7 ">
             See how it works{" "}
             <Image
               src="/icons/RightArrow.svg"
@@ -62,30 +62,34 @@ const FeatureCardDetails = ({
 
 const FeatureImage = ({ src }) => {
   return (
-    <div className={`relative`}>
+    <div className={`hidden xl:block relative`}>
       <Image src={src} fill alt="feature-image" />
     </div>
   );
 };
 
 const FeatureWrapper = ({ children }) => {
-  return <div className="grid grid-cols-2 gap-20">{children}</div>;
+  return (
+    <div className="grid grid-cols-1 xl:grid-cols-2 gap-16 lg:gap-20">
+      {children}
+    </div>
+  );
 };
 
 export const Features = () => {
   return (
-    <div className="py-[120px] bg-[#0C0C14]">
+    <div className="py-20 lg:py-[120px] bg-[#0C0C14]">
       <SectionWrapper>
         <div>
           {/* header */}
           <div className="flex flex-col items-center justify-center gap-5">
-            <h2 className="w-[730px] text-center text-[#F8F8FF] text-[44px] font-semibold leading-[130%]">
+            <h2 className="w-full lg:w-[730px] text-center text-[#F8F8FF] text-4xl lg:text-[44px] font-semibold leading-[140%] lg:leading-[130%]">
               Upselling &{" "}
               <span className="px-1 textBGPrimary rounded-md">Automation</span>{" "}
               Tools For OnlyFans Agencies
             </h2>
 
-            <p className="w-[570.56px] text-center text-textSecondary text-base font-normal leading-7">
+            <p className="w-full lg:w-[570px] text-center text-textSecondary text-xl lg:text-base font-normal leading-[150%] lg:leading-7">
               Nunc rhoncus eget erat eget tempus. In nunc dolor, accumsan eget
               ipsum ut, hendrerit accumsan leo. Nullam ullamcorper ante ac
               fringilla mollis euismod sem dolor
@@ -94,8 +98,7 @@ export const Features = () => {
           {/* header */}
 
           {/* feature card */}
-
-          <div className="mt-20 flex flex-col gap-x-20 gap-y-[120px]">
+          <div className="mt-20 flex flex-col gap-x-20 gap-y-[60px] lg:gap-y-[120px]">
             <FeatureWrapper>
               <FeatureCardDetails
                 label={"1:1 Chatting"}
@@ -106,7 +109,7 @@ export const Features = () => {
                 circleColor="#6366F1"
                 gradientClass={`from-[#818CF8] via-[#818df85f] to-[#0C0C14]`}
               >
-                <div className="mt-10 grid grid-cols-2 gap-4">
+                <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-4">
                   <FeatureTag title="Fan's CRM" icon={"/icons/Analytics.svg"} />
                   <FeatureTag
                     title="Avoid Freeloaders"
@@ -138,7 +141,7 @@ export const Features = () => {
                 circleColor="#EBB308"
                 gradientClass="from-[#FBBF24] via-[#fbbe245f] to-[#0C0C14]"
               >
-                <div className="mt-10 grid grid-cols-2 gap-4">
+                <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-4">
                   <FeatureTag
                     title="Personalized Pricing™"
                     icon={"/icons/Price_change.svg"}
