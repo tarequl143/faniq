@@ -62,6 +62,9 @@ module.exports = {
         textSecondary: "#94A2C9",
         bgPrimary: "#0C0C14",
       },
+      listStyleType: {
+        square: "square",
+      },
     },
   },
   plugins: [],

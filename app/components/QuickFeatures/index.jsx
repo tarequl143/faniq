@@ -13,11 +13,11 @@ const Card = ({ title, desc, icon }) => {
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
 
-      <h4 className="relative text-slate-50 text-xl leading-relaxed mt-7 before:block before:absolute before:h-[38px] before:w-[4px] before:rounded-xl before:bg-[#5249E0] before:-left-[20px] lg:before:-left-[57px]">
+      <h4 className="relative text-slate-50 text-lg leading-relaxed mt-7 before:block before:absolute before:h-[38px] before:w-[4px] before:rounded-xl before:bg-[#5249E0] before:-left-[20px] lg:before:-left-[57px]">
         {title}
       </h4>
 
-      <p className="text-[#94A2C9] text-lg lg:text-base font-normal leading-7 mt-5">
+      <p className="text-[#94A2C9] text-base font-normal leading-7 mt-5">
         {desc}
       </p>
     </div>

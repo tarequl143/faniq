@@ -7,13 +7,13 @@ export const Hero = () => {
     <div className="py-[60px] lg:py-[100px] bg-hero_pattern bg-center bg-no-repeat bg-cover">
       <SectionWrapper>
         <div className="flex flex-col justify-center items-center">
-          <h1 className="text-center text-slate-50 text-[48px] md:text-6xl font-semibold leading-[130%]">
+          <h1 className="text-center text-slate-50 text-[36px] md:text-6xl font-semibold leading-[130%]">
             Grow your{" "}
             <span className="px-1 textBGPrimary rounded-md">OnlyFans</span>{" "}
             <br />
             revenue with AI Powers✨
           </h1>
-          <div className="w-full lg:w-[594px] text-center text-textSecondary text-2xl lg:text-base font-normal leading-[150%] lg:leading-[170%] mt-5 lg:mt-3">
+          <div className="w-full lg:w-[594px] text-center text-textSecondary text-xl lg:text-base font-normal leading-[150%] lg:leading-[170%] mt-5 lg:mt-3">
             FansIQ helps you and your chatters focus on fans that make you the
             most revenue and provide AI chatting tools to grow your revenue.
           </div>

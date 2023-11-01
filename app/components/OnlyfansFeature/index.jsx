@@ -6,7 +6,7 @@ export const OnlyFansFeatures = () => {
     <div className="bg-[#0E0F1C] pt-[80px] md:pt-[120px] pb-[60px] md:pb-[84px]">
       <SectionWrapper>
         <div className="flex flex-col md:flex-row justify-around align-center">
-          <h2 className="w-full md:w-[434px] text-[#F8F8FF] text-[36px] md:text-[44px] text-center md:text-left font-semibold leading-[57px]">
+          <h2 className="w-full md:w-[434px] text-[#F8F8FF] text-[30px] md:text-[44px] text-center md:text-left font-semibold md:leading-[57px]">
             Made For{" "}
             <span className="px-1 textBGPrimary rounded-md">OnlyFans</span>{" "}
             Agencies Success

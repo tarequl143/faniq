@@ -4,8 +4,15 @@ import Image from "next/image";
 
 const FeatureTag = ({ title, icon }) => {
   return (
-    <div className="flex items-center justify-start gap-3 text-[#94A2C9] text-xl lg:text-base font-medium leading-7">
-      <Image src={icon} height={20} width={20} alt="icon" />
+    <div className="flex items-center justify-start gap-3 text-[#94A2C9] text-base font-medium leading-7">
+      {/* icon */}
+      <div className="hidden md:block">
+        <Image src={icon} height={20} width={20} alt="icon" />
+      </div>
+      <div className="block md:hidden">
+        <Image src={icon} height={24} width={24} alt="icon" />
+      </div>
+      {/* icon */}
       {title}
     </div>
   );
@@ -28,17 +35,17 @@ const FeatureCardDetails = ({
           backgroundColor: circleColor,
         }}
       />
-      <div className="px-10 pb-7">
+      <div className="px-8 lg:px-10 pb-7">
         <h6
           className={`text-lg lg:text-base font-medium leading-7`}
           style={{ color: circleColor }}
         >
           {label}
         </h6>
-        <h3 className="w-full lg:w-[440px] text-[#F8F8FF] text-[28px] lg:text-[32px] font-semibold leading-[41.60px] mt-5">
+        <h3 className="w-full lg:w-[440px] text-[#F8F8FF] text-[24px] lg:text-[32px] font-semibold leading-[41.60px] mt-5">
           {title}
         </h3>
-        <p className="w-full lg:w-[436.44px] text-[#94A2C9] text-xl lg:text-base font-normal leading-7 mt-5 lg:mt-7">
+        <p className="w-full lg:w-[436.44px] text-[#94A2C9] text-lg lg:text-base font-normal leading-7 mt-5 lg:mt-7">
           {description}
         </p>
 
@@ -70,7 +77,7 @@ const FeatureImage = ({ src }) => {
 
 const FeatureWrapper = ({ children }) => {
   return (
-    <div className="grid grid-cols-1 xl:grid-cols-2 gap-16 lg:gap-20">
+    <div className="grid grid-cols-1 xl:grid-cols-2 gap-0 lg:gap-20">
       {children}
     </div>
   );
@@ -83,13 +90,13 @@ export const Features = () => {
         <div>
           {/* header */}
           <div className="flex flex-col items-center justify-center gap-5">
-            <h2 className="w-full lg:w-[730px] text-center text-[#F8F8FF] text-4xl lg:text-[44px] font-semibold leading-[140%] lg:leading-[130%]">
+            <h2 className="w-full lg:w-[730px] text-center text-[#F8F8FF] text-3xl lg:text-[44px] font-semibold leading-[140%] lg:leading-[130%]">
               Upselling &{" "}
               <span className="px-1 textBGPrimary rounded-md">Automation</span>{" "}
               Tools For OnlyFans Agencies
             </h2>
 
-            <p className="w-full lg:w-[570px] text-center text-textSecondary text-xl lg:text-base font-normal leading-[150%] lg:leading-7">
+            <p className="w-full lg:w-[570px] text-center text-textSecondary text-lg lg:text-base font-normal leading-[150%] lg:leading-7">
               Nunc rhoncus eget erat eget tempus. In nunc dolor, accumsan eget
               ipsum ut, hendrerit accumsan leo. Nullam ullamcorper ante ac
               fringilla mollis euismod sem dolor

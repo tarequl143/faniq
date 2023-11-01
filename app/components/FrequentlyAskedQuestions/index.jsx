@@ -15,7 +15,7 @@ const Accordion = ({ title, open = false, children }) => {
     <div className="rounded-md bg-quesBg bg-no-repeat bg-cover bg-center py-6 px-5">
       <div className="flex items-start ">
         <h4
-          className="flex-1 text-lg md:text-base font-semibold leading-[130%]"
+          className="flex-1 text-base font-semibold leading-[130%]"
           style={{
             color: show ? "#F8F8FF" : "#94A2C9",
           }}
@@ -42,7 +42,7 @@ export const FrequentlyAskedQuestions = () => {
   return (
     <div className="pt-20 md:pt-[120px]  bg-[#0E0F1C]">
       <SectionWrapper>
-        <h2 className="text-center text-slate-50 text-[36px] lg:text-[44px] font-semibold leading-[57px]">
+        <h2 className="text-center text-slate-50 text-[30px] lg:text-[44px] font-semibold md:leading-[57px]">
           Frequently{" "}
           <span className="px-1 textBGPrimary rounded-md">Asked Questions</span>
         </h2>
