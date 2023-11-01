@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { SectionWrapper } from "../SectionWrapper";
 import Image from "next/image";
 
@@ -196,7 +198,7 @@ const PricingCard = ({ title, price, desc, features, banner, isActive }) => {
   );
 };
 
-const PricingHeader = () => {
+const PricingHeader = ({ onChangeAnnual, annualActive }) => {
   return (
     <div className="pt-[80px] lg:pt-[120px] bg-priceHeaderBG bg-cover bg-no-repeat bg-center">
       <SectionWrapper>
@@ -219,10 +221,34 @@ const PricingHeader = () => {
         <div className="flex items-center justify-start gap-4 mt-[60px] lg:mt-20 text-lg lg:text-base">
           <p className="text-[#F8F8FF] font-bold leading-none">Monthly</p>
 
-          <Image src="/switch.svg" height={20} width={40} alt="switch" />
-
+          <label className="flex cursor-pointer select-none items-center">
+            <div className="relative">
+              <input
+                type="checkbox"
+                checked={annualActive}
+                onChange={() => onChangeAnnual(!annualActive)}
+                className="sr-only"
+              />
+              <div
+                className={`box block h-6 w-14 rounded-full border-2 border-[#6F7FAB] `}
+              ></div>
+              <div
+                className={`absolute -left-[4px] -top-[4px] flex h-8 w-8 items-center justify-center rounded-full bg-white transition ${
+                  annualActive ? "translate-x-full" : ""
+                }`}
+                style={{
+                  backgroundImage: "url(/tick.svg)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+              ></div>
+            </div>
+          </label>
           <p className="text-[#94A2C9] font-normal ">
-            Annually <span className="text-[#018CCF]">(Save 20%)</span>
+            Annually{" "}
+            <span className=" text-[#018CCF] whitespace-nowrap">
+              (Save 20%)
+            </span>
           </p>
         </div>
       </SectionWrapper>
@@ -231,9 +257,11 @@ const PricingHeader = () => {
 };
 
 export const Pricing = () => {
+  const [annual, setAnnual] = useState(false);
+
   return (
     <div>
-      <PricingHeader />
+      <PricingHeader onChangeAnnual={setAnnual} annualActive={annual} />
 
       <div className="mt-10 lg:mt-[62px]">
         <SectionWrapper>
