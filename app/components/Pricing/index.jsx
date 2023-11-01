@@ -98,6 +98,9 @@ const pricings = [
 ];
 
 const PricingCard = ({ title, price, desc, features, banner, isActive }) => {
+  const [showAll, setShowAll] = useState(false);
+
+  const featuresToRender = showAll ? features : features.slice(0, 4);
   return (
     <div
       className={`bg-[#131426] py-10 px-5 rounded relative border ${
@@ -149,7 +152,7 @@ const PricingCard = ({ title, price, desc, features, banner, isActive }) => {
 
       {/* features */}
       <div className="py-12 flex flex-col gap-5">
-        {features.map((feature, index) => {
+        {featuresToRender.map((feature, index) => {
           return (
             <div key={index}>
               <div className="flex items-start gap-3">
@@ -175,7 +178,10 @@ const PricingCard = ({ title, price, desc, features, banner, isActive }) => {
       {/* features */}
 
       {/* button */}
-      <div className="group cursor-pointer py-3 bg-[#131426] rounded-md flex items-center justify-center gap-4 border border-[#545B77]">
+      <div
+        className="group cursor-pointer py-3 bg-[#131426] rounded-md flex items-center justify-center gap-4 border border-[#545B77]"
+        onClick={() => setShowAll(!showAll)}
+      >
         <p className="text-[#94A2C9] text-base lg:text-sm font-medium group-hover:text-[#ffffff]">
           Show all feature
         </p>
@@ -185,6 +191,9 @@ const PricingCard = ({ title, price, desc, features, banner, isActive }) => {
           width={20}
           alt="arrow"
           className="group-hover:hidden"
+          style={{
+            transform: showAll ? "rotate(180deg)" : "rotate(0deg)",
+          }}
         />
         <Image
           src="/expand_more_white.png"
@@ -192,6 +201,9 @@ const PricingCard = ({ title, price, desc, features, banner, isActive }) => {
           width={20}
           alt="arrow"
           className="hidden group-hover:inline-flex"
+          style={{
+            transform: showAll ? "rotate(180deg)" : "rotate(0deg)",
+          }}
         />
       </div>
     </div>
