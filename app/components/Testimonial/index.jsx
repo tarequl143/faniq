@@ -12,7 +12,7 @@ const brands = [
 
 export const Testimonial = () => {
   return (
-    <div className="bg-[#0E0F1C] pt-[80px] pb-20 lg:pb-[110px]">
+    <div className="bg-[#0E0F1C] pt-[80px] pb-10 lg:pb-[110px]">
       <SectionWrapper>
         <h2 className="text-center text-slate-50 text-[30px] lg:text-[44px] font-semibold lg:leading-[57.20px]">
           Join 850+ of Top Agencies
@@ -42,8 +42,7 @@ export const Testimonial = () => {
         </div>
 
         {/*  */}
-
-        <div className="w-full flex gap-16 items-center justify-center lg:mt-5 overflow-x-auto">
+        <div className="w-full flex gap-6 md:gap-16 flex-wrap items-center justify-center lg:mt-5">
           {brands.map((brand, index) => (
             <Image
               key={index}
@@ -51,6 +50,7 @@ export const Testimonial = () => {
               alt="brand"
               width={108}
               height={108}
+              className="h-20 w-20 md:w-[108px] md:h-[108px]"
             />
           ))}
         </div>
